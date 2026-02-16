@@ -13,7 +13,8 @@
 
   .map {
     position: relative;
-    width: 400px;
+    width: 80%;
+    max-width: 600px;
     margin: 20px auto;
   }
 
@@ -24,52 +25,25 @@
 
   .city {
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     background: red;
     border-radius: 50%;
     cursor: pointer;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
   }
 
   #info {
     margin-top: 20px;
-    padding: 10px;
+    padding: 12px;
     background: white;
     border-radius: 8px;
     display: inline-block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
 
   /* City positions */
   .tokyo { top: 45%; left: 78%; }
   .kyoto { top: 55%; left: 65%; }
-  .osaka { top: 58%; left: 63%; }
-
-</style>
-</head>
-
-<body>
-
-<h2>My Japan Itinerary 🇯🇵</h2>
-
-<div class="map"><img src="Japan_location_map.svg" alt="Japan map">
-  <div class="city tokyo" onclick="showInfo('Tokyo')"></div>
-  <div class="city kyoto" onclick="showInfo('Kyoto')"></div>
-  <div class="city osaka" onclick="showInfo('Osaka')"></div>
-</div>
-
-<div id="info">Click a city</div>
-
-<script>
-function showInfo(city) {
-  const info = {
-    Tokyo: "Tokyo 🗼 — Arrival, Shibuya, Akihabara",
-    Kyoto: "Kyoto ⛩️ — Temples, Fushimi Inari, Arashiyama",
-    Osaka: "Osaka 🍜 — Food, Dotonbori, Nightlife"
-  };
-
-  document.getElementById("info").innerHTML = info[city];
-}
-</script>
-
-</body>
-</html>
+  .o
