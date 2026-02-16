@@ -46,4 +46,37 @@
   /* City positions */
   .tokyo { top: 45%; left: 78%; }
   .kyoto { top: 55%; left: 65%; }
-  .o
+  .osaka { top: 58%; left: 63%; }
+
+</style>
+</head>
+
+<body>
+
+<h2>My Japan Itinerary 🇯🇵</h2>
+
+<div class="map">
+  <!-- Updated PNG map -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Location_map_Japan.png" alt="Japan map">
+
+  <div class="city tokyo" onclick="showInfo('Tokyo')" title="Tokyo"></div>
+  <div class="city kyoto" onclick="showInfo('Kyoto')" title="Kyoto"></div>
+  <div class="city osaka" onclick="showInfo('Osaka')" title="Osaka"></div>
+</div>
+
+<div id="info">Click a city</div>
+
+<script>
+function showInfo(city) {
+  const info = {
+    Tokyo: "Tokyo 🗼 — Arrival, Shibuya, Akihabara",
+    Kyoto: "Kyoto ⛩️ — Temples, Fushimi Inari, Arashiyama",
+    Osaka: "Osaka 🍜 — Food, Dotonbori, Nightlife"
+  };
+
+  document.getElementById("info").innerHTML = info[city];
+}
+</script>
+
+</body>
+</html>
